@@ -17,6 +17,7 @@
 		8C17A7352A450EF900AFFE22 /* DessertPickerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C17A7342A450EF900AFFE22 /* DessertPickerTests.swift */; };
 		8C17A73F2A450EF900AFFE22 /* DessertPickerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C17A73E2A450EF900AFFE22 /* DessertPickerUITests.swift */; };
 		8C17A7412A450EF900AFFE22 /* DessertPickerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C17A7402A450EF900AFFE22 /* DessertPickerUITestsLaunchTests.swift */; };
+		8C17A74E2A45250B00AFFE22 /* DessertInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C17A74D2A45250B00AFFE22 /* DessertInfoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		8C17A73A2A450EF900AFFE22 /* DessertPickerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DessertPickerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C17A73E2A450EF900AFFE22 /* DessertPickerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertPickerUITests.swift; sourceTree = "<group>"; };
 		8C17A7402A450EF900AFFE22 /* DessertPickerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertPickerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8C17A74D2A45250B00AFFE22 /* DessertInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertInfoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				8C17A71A2A450EF500AFFE22 /* AppDelegate.swift */,
 				8C17A71C2A450EF500AFFE22 /* SceneDelegate.swift */,
 				8C17A71E2A450EF500AFFE22 /* ViewController.swift */,
+				8C17A74D2A45250B00AFFE22 /* DessertInfoViewController.swift */,
 				8C17A7202A450EF500AFFE22 /* Main.storyboard */,
 				8C17A7262A450EF800AFFE22 /* Assets.xcassets */,
 				8C17A7282A450EF800AFFE22 /* LaunchScreen.storyboard */,
@@ -264,6 +267,7 @@
 				8C17A71F2A450EF500AFFE22 /* ViewController.swift in Sources */,
 				8C17A71B2A450EF500AFFE22 /* AppDelegate.swift in Sources */,
 				8C17A7252A450EF500AFFE22 /* DessertPicker.xcdatamodeld in Sources */,
+				8C17A74E2A45250B00AFFE22 /* DessertInfoViewController.swift in Sources */,
 				8C17A71D2A450EF500AFFE22 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
