@@ -10,6 +10,8 @@ You can scroll through the desserts and press on any name you'd like to know mor
 When you choose your desired dessert, a new view will appear with the title of the desert, the list of ingredients and their required measurements, as well as the 
 instructions on how to make the dessert. All of this information is provided from another API fetch.
 
+![Screen Shot 2023-06-27 at 2 55 54 PM](https://github.com/Pr3stin/DessertPicker/assets/98368583/2aa2d02f-1a3c-4007-9115-118e7babb8eb)
+
 In the top left corner of the screen is a button that when pressed, takes you back to the list of desserts.
 
 Thank you and enjoy your desserts!
