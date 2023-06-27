@@ -14,21 +14,12 @@
 		8C17A7252A450EF500AFFE22 /* DessertPicker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8C17A7232A450EF500AFFE22 /* DessertPicker.xcdatamodeld */; };
 		8C17A7272A450EF800AFFE22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C17A7262A450EF800AFFE22 /* Assets.xcassets */; };
 		8C17A72A2A450EF800AFFE22 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C17A7282A450EF800AFFE22 /* LaunchScreen.storyboard */; };
-		8C17A7352A450EF900AFFE22 /* DessertPickerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C17A7342A450EF900AFFE22 /* DessertPickerTests.swift */; };
-		8C17A73F2A450EF900AFFE22 /* DessertPickerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C17A73E2A450EF900AFFE22 /* DessertPickerUITests.swift */; };
-		8C17A7412A450EF900AFFE22 /* DessertPickerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C17A7402A450EF900AFFE22 /* DessertPickerUITestsLaunchTests.swift */; };
 		8C17A74E2A45250B00AFFE22 /* DessertInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C17A74D2A45250B00AFFE22 /* DessertInfoViewController.swift */; };
+		8CFB9BBF2A4B51A700D78AE6 /* ButtonTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFB9BBE2A4B51A700D78AE6 /* ButtonTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		8C17A7312A450EF900AFFE22 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8C17A70F2A450EF400AFFE22 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 8C17A7162A450EF500AFFE22;
-			remoteInfo = DessertPicker;
-		};
-		8C17A73B2A450EF900AFFE22 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 8C17A70F2A450EF400AFFE22 /* Project object */;
 			proxyType = 1;
@@ -48,11 +39,8 @@
 		8C17A7292A450EF800AFFE22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8C17A72B2A450EF800AFFE22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8C17A7302A450EF900AFFE22 /* DessertPickerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DessertPickerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8C17A7342A450EF900AFFE22 /* DessertPickerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertPickerTests.swift; sourceTree = "<group>"; };
-		8C17A73A2A450EF900AFFE22 /* DessertPickerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DessertPickerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8C17A73E2A450EF900AFFE22 /* DessertPickerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertPickerUITests.swift; sourceTree = "<group>"; };
-		8C17A7402A450EF900AFFE22 /* DessertPickerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertPickerUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		8C17A74D2A45250B00AFFE22 /* DessertInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertInfoViewController.swift; sourceTree = "<group>"; };
+		8CFB9BBE2A4B51A700D78AE6 /* ButtonTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,13 +58,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8C17A7372A450EF900AFFE22 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -85,7 +66,6 @@
 			children = (
 				8C17A7192A450EF500AFFE22 /* DessertPicker */,
 				8C17A7332A450EF900AFFE22 /* DessertPickerTests */,
-				8C17A73D2A450EF900AFFE22 /* DessertPickerUITests */,
 				8C17A7182A450EF500AFFE22 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -95,7 +75,6 @@
 			children = (
 				8C17A7172A450EF500AFFE22 /* DessertPicker.app */,
 				8C17A7302A450EF900AFFE22 /* DessertPickerTests.xctest */,
-				8C17A73A2A450EF900AFFE22 /* DessertPickerUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -119,18 +98,9 @@
 		8C17A7332A450EF900AFFE22 /* DessertPickerTests */ = {
 			isa = PBXGroup;
 			children = (
-				8C17A7342A450EF900AFFE22 /* DessertPickerTests.swift */,
+				8CFB9BBE2A4B51A700D78AE6 /* ButtonTest.swift */,
 			);
 			path = DessertPickerTests;
-			sourceTree = "<group>";
-		};
-		8C17A73D2A450EF900AFFE22 /* DessertPickerUITests */ = {
-			isa = PBXGroup;
-			children = (
-				8C17A73E2A450EF900AFFE22 /* DessertPickerUITests.swift */,
-				8C17A7402A450EF900AFFE22 /* DessertPickerUITestsLaunchTests.swift */,
-			);
-			path = DessertPickerUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -171,24 +141,6 @@
 			productReference = 8C17A7302A450EF900AFFE22 /* DessertPickerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		8C17A7392A450EF900AFFE22 /* DessertPickerUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 8C17A74A2A450EF900AFFE22 /* Build configuration list for PBXNativeTarget "DessertPickerUITests" */;
-			buildPhases = (
-				8C17A7362A450EF900AFFE22 /* Sources */,
-				8C17A7372A450EF900AFFE22 /* Frameworks */,
-				8C17A7382A450EF900AFFE22 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				8C17A73C2A450EF900AFFE22 /* PBXTargetDependency */,
-			);
-			name = DessertPickerUITests;
-			productName = DessertPickerUITests;
-			productReference = 8C17A73A2A450EF900AFFE22 /* DessertPickerUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -204,10 +156,7 @@
 					};
 					8C17A72F2A450EF900AFFE22 = {
 						CreatedOnToolsVersion = 14.1;
-						TestTargetID = 8C17A7162A450EF500AFFE22;
-					};
-					8C17A7392A450EF900AFFE22 = {
-						CreatedOnToolsVersion = 14.1;
+						LastSwiftMigration = 1410;
 						TestTargetID = 8C17A7162A450EF500AFFE22;
 					};
 				};
@@ -227,7 +176,6 @@
 			targets = (
 				8C17A7162A450EF500AFFE22 /* DessertPicker */,
 				8C17A72F2A450EF900AFFE22 /* DessertPickerTests */,
-				8C17A7392A450EF900AFFE22 /* DessertPickerUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -244,13 +192,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		8C17A72E2A450EF900AFFE22 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8C17A7382A450EF900AFFE22 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -276,16 +217,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8C17A7352A450EF900AFFE22 /* DessertPickerTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8C17A7362A450EF900AFFE22 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8C17A73F2A450EF900AFFE22 /* DessertPickerUITests.swift in Sources */,
-				8C17A7412A450EF900AFFE22 /* DessertPickerUITestsLaunchTests.swift in Sources */,
+				8CFB9BBF2A4B51A700D78AE6 /* ButtonTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,11 +228,6 @@
 			isa = PBXTargetDependency;
 			target = 8C17A7162A450EF500AFFE22 /* DessertPicker */;
 			targetProxy = 8C17A7312A450EF900AFFE22 /* PBXContainerItemProxy */;
-		};
-		8C17A73C2A450EF900AFFE22 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 8C17A7162A450EF500AFFE22 /* DessertPicker */;
-			targetProxy = 8C17A73B2A450EF900AFFE22 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -497,14 +424,22 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.prestinlau.DessertPickerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "DessertPickerTests/DessertPicker-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DessertPicker.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/DessertPicker";
@@ -516,51 +451,24 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.prestinlau.DessertPickerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "DessertPickerTests/DessertPicker-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DessertPicker.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/DessertPicker";
-			};
-			name = Release;
-		};
-		8C17A74B2A450EF900AFFE22 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.prestinlau.DessertPickerUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = DessertPicker;
-			};
-			name = Debug;
-		};
-		8C17A74C2A450EF900AFFE22 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.prestinlau.DessertPickerUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = DessertPicker;
 			};
 			name = Release;
 		};
@@ -590,15 +498,6 @@
 			buildConfigurations = (
 				8C17A7482A450EF900AFFE22 /* Debug */,
 				8C17A7492A450EF900AFFE22 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		8C17A74A2A450EF900AFFE22 /* Build configuration list for PBXNativeTarget "DessertPickerUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				8C17A74B2A450EF900AFFE22 /* Debug */,
-				8C17A74C2A450EF900AFFE22 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

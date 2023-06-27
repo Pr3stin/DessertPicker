@@ -1,14 +1,24 @@
 //
-//  DessertPickerTests.swift
+//  ButtonTest.swift
 //  DessertPickerTests
 //
-//  Created by Prestin Lau on 6/22/23.
+//  Created by Prestin Lau on 6/27/23.
 //
 
 import XCTest
-@testable import DessertPicker
 
-final class DessertPickerTests: XCTestCase {
+final class ButtonTest: XCTestCase {
+    
+    func test_button_pressed_presents_new_view() {
+        let window = UIWindow()
+        let initialView = ViewController()
+        let button = UIButton()
+        window.rootViewController = initialView
+        window.makeKeyAndVisible()
+        initialView.buttonTapped(button)
+        let presentedViewController = window.rootViewController?.presentedViewController
+        XCTAssertTrue(presentedViewController is DessertInfoViewController)
+    }
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.

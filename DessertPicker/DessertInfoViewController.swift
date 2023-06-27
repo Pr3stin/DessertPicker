@@ -18,15 +18,15 @@ class DessertInfoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .white
-               
-                fetchInstructions()
-            }
+        view.backgroundColor = UIColor(named: "BackgroundPink")
+        
+        fetchInstructions()
+    }
     
     func fetchInstructions() {
         guard let mealID = dessertID else {
-                    return
-                }
+            return
+        }
         guard let url = URL(string: "https://www.themealdb.com/api/json/v1/1/lookup.php?i=\(mealID)") else {
             print("Invalid URL")
             return
@@ -49,17 +49,17 @@ class DessertInfoViewController: UIViewController {
                 {
                     
                     var ingredients: [String] = []
-                                    
+                    
                     for i in 1...20 {
-                                        if let ingredient = firstMeal["strIngredient\(i)"] as? String,
-                                           let measure = firstMeal["strMeasure\(i)"] as? String,
-                                           !ingredient.isEmpty, !measure.isEmpty {
-                                            let ingredientWithMeasure = "\(measure) \(ingredient)"
-                                            ingredients.append(ingredientWithMeasure)
-                                        }
-                                    }
-                                    
-                                    let joinedIngredients = ingredients.joined(separator: ", ")
+                        if let ingredient = firstMeal["strIngredient\(i)"] as? String,
+                           let measure = firstMeal["strMeasure\(i)"] as? String,
+                           !ingredient.isEmpty, !measure.isEmpty {
+                            let ingredientWithMeasure = "\(measure) \(ingredient)"
+                            ingredients.append(ingredientWithMeasure)
+                        }
+                    }
+                    
+                    let joinedIngredients = ingredients.joined(separator: ", ")
                     
                     DispatchQueue.main.async {
                         self?.dessertInfoLabel.text = instructions
@@ -86,17 +86,31 @@ class DessertInfoViewController: UIViewController {
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         titleLabel.textAlignment = .center
         titleLabel.numberOfLines = 0
-        titleLabel.text = "\(dessertName ?? "")"
+        titleLabel.font = UIFont.boldSystemFont(ofSize: 20)
+        titleLabel.text = "\(dessertName ?? "") "
         
+        let ingredientsHeaderLabel = UILabel()
+        ingredientsHeaderLabel.translatesAutoresizingMaskIntoConstraints = false
+        ingredientsHeaderLabel.textAlignment = .center
+        ingredientsHeaderLabel.font = UIFont.boldSystemFont(ofSize: 17)
+        ingredientsHeaderLabel.text = "Ingredients:"
         
-        ingredientLabel.translatesAutoresizingMaskIntoConstraints = false
-        ingredientLabel.textAlignment = .center
-        ingredientLabel.numberOfLines = 0
-        ingredientLabel.text = subtitle
+        let subtitleLabel = UILabel()
+        subtitleLabel.translatesAutoresizingMaskIntoConstraints = false
+        subtitleLabel.textAlignment = .center
+        subtitleLabel.numberOfLines = 0
+        subtitleLabel.text = subtitle
         
+        let instructionsHeaderLabel = UILabel()
+        instructionsHeaderLabel.translatesAutoresizingMaskIntoConstraints = false
+        instructionsHeaderLabel.textAlignment = .center
+        instructionsHeaderLabel.font = UIFont.boldSystemFont(ofSize: 17)
+        instructionsHeaderLabel.text = "Instructions:"
         
         contentView.addSubview(titleLabel)
-        contentView.addSubview(ingredientLabel)
+        contentView.addSubview(ingredientsHeaderLabel)
+        contentView.addSubview(subtitleLabel)
+        contentView.addSubview(instructionsHeaderLabel)
         contentView.addSubview(dessertInfoLabel)
         
         dessertInfoLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -115,20 +129,29 @@ class DessertInfoViewController: UIViewController {
             titleLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
             titleLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 16),
             
-            ingredientLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
-            ingredientLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
-            ingredientLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 8),
+            ingredientsHeaderLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
+            ingredientsHeaderLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
+            ingredientsHeaderLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 8),
+            
+            subtitleLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
+            subtitleLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
+            subtitleLabel.topAnchor.constraint(equalTo: ingredientsHeaderLabel.bottomAnchor, constant: 8),
+            
+            instructionsHeaderLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
+            instructionsHeaderLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
+            instructionsHeaderLabel.topAnchor.constraint(equalTo: subtitleLabel.bottomAnchor, constant: 8),
             
             dessertInfoLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
             dessertInfoLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
-            dessertInfoLabel.topAnchor.constraint(equalTo: ingredientLabel.bottomAnchor, constant: 16),
+            dessertInfoLabel.topAnchor.constraint(equalTo: instructionsHeaderLabel.bottomAnchor, constant: 8),
             dessertInfoLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -16)
         ])
         
         view.addSubview(scrollView)
     }
     
-    }
+    
+}
 
 
 
