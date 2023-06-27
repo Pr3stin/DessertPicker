@@ -75,29 +75,7 @@ class ViewController: UIViewController {
         task.resume()
     }
     
-    
-//    func createButtons() {
-//        let buttonWidth: CGFloat = 200
-//        let buttonHeight: CGFloat = 40
-//        let buttonSpacing: CGFloat = 20
-//        var yOffset: CGFloat = 100
-//
-//        for (index, meal) in (self.dessertApi).enumerated() {
-//            let button = UIButton(type: .system)
-//            button.frame = CGRect(x: (scroll.frame.width - buttonWidth) / 2, y: yOffset, width: buttonWidth, height: buttonHeight)
-//            button.setTitle("\(meal.dessertName)", for: .normal)
-//            button.setTitleColor(.black, for: .normal)
-//            button.addTarget(self, action: #selector(buttonTapped(_:)), for: .touchUpInside)
-//            button.tag = index
-//
-//
-//            scroll.addSubview(button)
-//
-//            yOffset += buttonHeight + buttonSpacing
-//        }
-//
-//        scroll.contentSize = CGSize(width: scroll.frame.width, height: yOffset)
-//    }
+
     
     func createButtons() {
         let buttonWidth: CGFloat = 200
