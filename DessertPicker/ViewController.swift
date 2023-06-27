@@ -99,12 +99,12 @@ class ViewController: UIViewController {
 
     @objc func buttonTapped(_ sender: UIButton) {
         let selectedDessert = self.dessertApi[sender.tag]
-        print("Button tapped with value: \(selectedDessert)")
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
            guard let mealDetailVC = storyboard.instantiateViewController(withIdentifier: "DessertInfoViewController") as? DessertInfoViewController else {
                return
            }
            
+        mealDetailVC.dessertName = selectedDessert.dessertName
            mealDetailVC.dessertID = selectedDessert.dessertID
            self.navigationController?.pushViewController(mealDetailVC, animated: true)
     }
