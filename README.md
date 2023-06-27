@@ -4,7 +4,7 @@ When you first load the app, you will be brought to the Dessert screen which is 
 
 You can scroll through the desserts and press on any name you'd like to know more about.
 
-
+![Screen Shot 2023-06-27 at 2 54 12 PM](https://github.com/Pr3stin/DessertPicker/assets/98368583/e3c5506d-13a0-4362-a28e-ddaeec042d88)
 
 
 When you choose your desired dessert, a new view will appear with the title of the desert, the list of ingredients and their required measurements, as well as the 
