@@ -8,7 +8,16 @@
 import UIKit
 
 class DessertInfoViewController: UIViewController {
-    var selectedValue: String?
+    
+    let dessertNameLabel = UILabel()
+    let dessertInfoLabel = UILabel()
+    var dessertID: String?
+    var dessertName: String?
+    struct DessertInfo {
+        let instructions: String
+        let ingredients: [String]
+        let measurements: [String]
+    }
     
     
     override func viewDidLoad() {
@@ -16,69 +25,60 @@ class DessertInfoViewController: UIViewController {
         
         view.backgroundColor = .white
         
-        if let value = selectedValue {
-            fetchMealDetails(for: value)
-        }
-    }
+        
+        guard let mealID = dessertID else {
+                    return
+                }
+        let url = "https://www.themealdb.com/api/json/v1/1/lookup.php?i=\(mealID)"
+               
+                fetchMealInfo(with: url)
+            }
     
-    func fetchMealDetails(for mealID: String) {
-        let urlString = "https://themealdb.com/api/json/v1/1/lookup.php?i=MEAL_ID"
-        guard let url = URL(string: urlString) else {
-            print("Invalid URL: \(urlString)")
+    func fetchMealInfo(with url: String) {
+        guard let mealID = dessertID else {
+                    return
+                }
+        let url = "https://www.themealdb.com/api/json/v1/1/lookup.php?i=\(mealID)"
+        guard let apiUrl = URL(string: url) else {
+            print("Invalid URL")
             return
         }
         
-        let task = URLSession.shared.dataTask(with: url) { [weak self] (data, response, error) in
+         URLSession.shared.dataTask(with: apiUrl) { [weak self] (data, response, error) in
             if let error = error {
                 print("Error: \(error.localizedDescription)")
                 return
             }
             
-            guard let data = data else {
-                print("Invalid API data")
-                return
-            }
-            
-            do {
-                let json = try JSONSerialization.jsonObject(with: data, options: [])
-                
-                if let dictionary = json as? [String: Any],
-                   let meals = dictionary["meals"] as? [[String: Any]],
-                   let meal = meals.first {
-                    DispatchQueue.main.async {
-                        self?.displayMealDetails(meal)
+             guard let data = data,
+                          let jsonResponse = try? JSONSerialization.jsonObject(with: data, options: []) as? [String: Any],
+                          let desserts = jsonResponse["desserts"] as? [[String: Any]] else {
+                        print("Invalid response or missing data")
+                        return
                     }
-                }
-            } catch {
-                print("JSON parsing error: \(error.localizedDescription)")
+                    
+                    var instructions = ""
+                    for dessert in desserts {
+                        if let dessertInstructions = dessert["strInstructions"] as? String {
+                            instructions += dessertInstructions + "\n\n"
+                        }
+                    }
+            
+            DispatchQueue.main.async {
+                self?.dessertInfoLabel.text = instructions
             }
-        }
+             
+        }.resume()
         
-        task.resume()
     }
     
-    func displayMealDetails(_ meal: [String: Any]) {
-        if let mealName = meal["strMeal"] as? String {
-            let label = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 40))
-            label.center = view.center
-            label.textAlignment = .center
-            label.text = mealName
-            
-            view.addSubview(label)
-        }
-        
-        
-        if let mealCategory = meal["strCategory"] as? String {
-            let categoryLabel = UILabel(frame: CGRect(x: 0, y: 50, width: 200, height: 40))
-            categoryLabel.center.x = view.center.x
-            categoryLabel.textAlignment = .center
-            categoryLabel.text = "Category: \(mealCategory)"
-            
-            view.addSubview(categoryLabel)
-        }
     }
+
+
+
+
     
-}
+
     
 
 
